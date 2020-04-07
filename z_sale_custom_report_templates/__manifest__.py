@@ -4,9 +4,9 @@
         'license': 'LGPL-3',
         'support': 'imazighenapps@gmail.com',
 
-        'summary': """ """,
+        'summary': """ Sale Custom Report Templates Designing""",
 
-        'description': """
+        'description': """Sale Custom Report Templates Designing...
         """,
 
     'author': "Imazighen",

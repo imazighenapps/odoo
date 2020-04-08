@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 {
-    'name': 'Imazighen Theme',
+    'name': 'Imazighen Enterprise Backend Theme',
     'category': 'Themes/Backend',
     'version': '1.0',
     'description':

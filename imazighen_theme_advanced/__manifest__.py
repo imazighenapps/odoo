@@ -16,7 +16,7 @@ This module modifies the web addon to provide Enterprise design and responsivene
     "price": "40",
     "currency": "EUR",
     "support": "imazighenapps@gmail.com",
-    'depends': ['web'],
+    'depends': ['web','imazighen_theme'],
     'auto_install': True,
     'data': [
         'views/webclient_templates.xml',

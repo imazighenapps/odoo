@@ -5,12 +5,6 @@
             <link rel="stylesheet" type="text/scss" href="/imazighen_theme_advanced/static/src/scss/primary_variables.scss"/>
         </xpath>
     </template>
-
-    <template id="_assets_secondary_variables" inherit_id="imazighen_theme._assets_secondary_variables" priority="15">
-        <xpath expr="//link" position="before">
-            <link rel="stylesheet" type="text/scss" href="/imazighen_theme_advanced/static/src/scss/secondary_variables.scss"/>
-        </xpath>
-    </template>
     <template id="assets_backend" name="imazighen_theme_advanced assets backend" inherit_id="web.assets_backend">
         <xpath expr="//link[@href='/imazighen_theme/static/src/scss/list_view.scss']" position="replace">
             <link rel="stylesheet" type="text/scss" href="/imazighen_theme_advanced/static/src/scss/list_view.scss"/>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.theme</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="5"/>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('settings')]" position="inside">
+                <div class="app_settings_block" data-string="Theme" string="Theme configuration" data-key="imazighen_theme_advanced">
+                    <h2>Theme Configuration</h2>
+                    <div class="row mt16 o_settings_container">
+                  
+                    <div class="o_setting_left_pane">
+                        <table class="table table-striped">
+                            <tr>
+                                <td>
+                                    <label for="main_menu_color"/>
+                                    <field name="main_menu_color" widget="color"/> 
+                                </td>
+                                <td>
+                                    <button string="Load default color" type="object" name="load_default_color_main_menu_color" class="oe_link pt-0 oe_inline"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td> 
+                                    <label for="premary_btn_color"/>
+                                    <field name="premary_btn_color" widget="color"/>
+                                </td> 
+                                <td> 
+                                    <button string="Load default color" type="object" name="load_default_color_premary_btn_color" class="oe_link pt-0 oe_inline"/>
+                                </td> 
+                            </tr>
+
+                            <tr>
+                                <td> 
+                                    <label for="list_view_header"/>
+                                    <field name="list_view_header" widget="color"/>
+                                </td> 
+                                <td> 
+                                    <button string="Load default color" type="object" name="load_default_color_list_view_header" class="oe_link pt-0 oe_inline"/>
+                                </td> 
+                            </tr>
+                            <tr>
+                                <td> 
+                                    <label for="list_view_header"/>
+                                    <field name="list_view_header" widget="color"/>
+                                </td> 
+                                <td> 
+                                    <button string="Load default color" type="object" name="load_default_color_list_view_header" class="oe_link pt-0 oe_inline"/>
+                                </td> 
+                            </tr>
+                            <tr>
+                                <td> 
+                                    <label for="list_footer_bg_color"/>  
+                                    <field name="list_footer_bg_color" widget="color"/>
+                                </td> 
+                                <td> 
+                                    <button string="Load default color" type="object" name="load_default_color_list_footer_bg_color" class="oe_link pt-0 oe_inline"/>
+                                </td> 
+                            </tr>
+                            <tr> 
+                                <td>
+                                    <label for="webclient_background"/>              
+                                    <field name="webclient_background" widget="color"/>
+                                </td>
+                                <td>
+                                    <button string="Load default color" type="object" name="load_default_color_webclient_background" class="oe_link pt-0 oe_inline"/>
+                                </td>
+                            </tr>  
+                            
+                            <tr> 
+                                <td>
+                                    <label for="view_background_color"/>    
+                                    <field name="view_background_color" widget="color"/>
+                                </td>    
+                                <td>
+                                    <button string="Load default color" type="object" name="load_default_color_view_background_color" class="oe_link pt-0 oe_inline"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>  
+                                    <label for="main_text_color"/>    
+                                    <field name="main_text_color" widget="color"/>
+                                </td>
+                                <td>
+                                    <button string="Load default color" type="object" name="load_default_color_main_text_color" class="oe_link pt-0 oe_inline"/>
+                                </td>
+                            </tr>
+                        </table>    
+                      
+                    </div>
+                    <div class="o_setting_right_pane col-12 col-lg-6 o_setting_box">
+                        <h4>Home menu background</h4>
+                        <table class="table table-striped">
+                           
+                            <tr>
+                                <td>
+                                    <div>
+                                        <span>from </span><field name="home_menu_background_from" widget="color"/>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <span>To </span> <field name="home_menu_background_to" widget="color"/> 
+                                    </div>     
+                                </td>
+                                <td>
+                                    <button string="Load default color" type="object" name="load_default_colorhome_menu_background" class="oe_link pt-0 oe_inline"/>
+                                </td>
+                            </tr>    
+                        </table>     
+                                
+                    </div>
+
+                   
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="theme_config_settings_action" model="ir.actions.act_window">
+        <field name="name">Settings</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.config.settings</field>
+        <field name="view_id" ref="res_config_settings_view_form"/>
+        <field name="view_mode">form</field>
+        <field name="target">inline</field>
+        <field name="context">{'module' : 'imazighen_theme_advanced'}</field>
+    </record>
+</odoo>

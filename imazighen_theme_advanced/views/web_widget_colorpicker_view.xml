@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="assets_backend_colors_widget" name="web_widget_colors assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" href="/imazighen_theme_advanced/static/src/css/colorswidget.css"/>
+            <link rel="stylesheet" href="/imazighen_theme_advanced/static/src/lib/bootstrap-colorpicker/css/bootstrap-colorpicker.css"/> 
+
+            <script type="text/javascript" src="/imazighen_theme_advanced/static/src/js/widgets/colorswidget.js"></script> 
+            <script type="text/javascript" src="/imazighen_theme_advanced/static/src/lib/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script> 
+
+
+        </xpath>
+    </template>
+</odoo>

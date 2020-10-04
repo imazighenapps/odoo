@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="_assets_primary_variables" inherit_id="imazighen_theme._assets_primary_variables" priority="15">
+        <xpath expr="//link[last()]" position="after">
+            <link rel="stylesheet" type="text/scss" href="/imazighen_theme_advanced/static/src/scss/primary_variables.scss"/>
+        </xpath>
+    </template>
+    <template id="assets_backend" name="imazighen_theme_advanced assets backend" inherit_id="web.assets_backend">
+        <xpath expr="//link[@href='/imazighen_theme/static/src/scss/list_view.scss']" position="replace">
+            <link rel="stylesheet" type="text/scss" href="/imazighen_theme_advanced/static/src/scss/list_view.scss"/>
+        </xpath>    
+    </template>
+    <template inherit_id="web.assets_common" id="assets_common" name="imazighen_theme_advance assets common">
+        <xpath position="replace" expr="//link[@href='/imazighen_theme/static/src/scss/ui.scss']">
+            <link href="/imazighen_theme_advanced/static/src/scss/ui.scss" type="text/scss" rel="stylesheet"/>
+        </xpath>
+    </template>
+
+   
+
+</odoo>

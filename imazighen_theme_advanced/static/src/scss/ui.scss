@@ -1,0 +1,6 @@
+.o_home_menu_background {
+    background: url(/imazighen_theme/static/src/img/home-menu-bg-overlay.svg), 
+    linear-gradient(to right bottom, $home_menu_background_from,$home_menu_background_to);
+    background-size: cover;
+}
+

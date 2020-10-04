@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_report_style_form" model="ir.ui.view">
+        <field name="name">view.report.style.form</field>
+        <field name="inherit_id" ref="z_base_custom_report_templates.view_report_style_form"/>
+        <field name="model">report.template.settings</field>
+        <field name="arch" type="xml">
+        
+            <xpath expr="//field[@name='footer_font']" position="after">
+                  <field name="template_po"/>
+                  <field name="template_rfq"/>
+            </xpath>
+        
+          
+        </field>
+    </record>
+</odoo>

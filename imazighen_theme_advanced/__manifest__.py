@@ -3,7 +3,7 @@
 {
     'name': 'Imazighen Advanced Enterprise Backend Theme',
     'category': 'Themes/Backend',
-    'version': '13.1',
+    'version': '13.2',
     'summary': """ Advanced Odoo Enterprise Backend Theme For Community Edition""",
     'description':
         """

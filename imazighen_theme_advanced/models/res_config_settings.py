@@ -24,15 +24,15 @@ default_colors = {'main_menu_color'    :'#875A7B',
 class ResConfigSettings(models.TransientModel):
     _inherit = 'res.config.settings'
 
-    main_menu_color              = fields.Char('Main menu color',)
-    premary_btn_color            = fields.Char('Primary button color',)
-    list_view_header             = fields.Char('List view header color',)
-    list_footer_bg_color         = fields.Char('List footer bg color',)
-    webclient_background         = fields.Char('Webclient background color',)
-    view_background_color        = fields.Char('View background color',)
-    main_text_color              = fields.Char('Main text color',)
-    home_menu_background_from    = fields.Char('Home menu background from',)
-    home_menu_background_to      = fields.Char('Home menu background from',)
+    main_menu_color              = fields.Char('Main menu color')
+    premary_btn_color            = fields.Char('Primary button color')
+    list_view_header             = fields.Char('List view header color')
+    list_footer_bg_color         = fields.Char('List footer bg color')
+    webclient_background         = fields.Char('Webclient background color')
+    view_background_color        = fields.Char('View background color')
+    main_text_color              = fields.Char('Main text color')
+    home_menu_background_from    = fields.Char('Home menu background from')
+    home_menu_background_to      = fields.Char('Home menu background from')
 
     def load_default_colorhome_menu_background(self,):
         self.env['ir.config_parameter'].set_param('home_menu_background_from', default_colors['home_menu_background_from'])
@@ -104,24 +104,57 @@ class ResConfigSettings(models.TransientModel):
     def set_values(self):
         params={}
         res = super(ResConfigSettings, self).set_values()
-        self.env['ir.config_parameter'].set_param('main_menu_color', self.main_menu_color)
-        self.env['ir.config_parameter'].set_param('premary_btn_color', self.premary_btn_color)
-        self.env['ir.config_parameter'].set_param('list_view_header', self.list_view_header)
-        self.env['ir.config_parameter'].set_param('list_footer_bg_color', self.list_view_header)
-        self.env['ir.config_parameter'].set_param('webclient_background', self.webclient_background)
-        self.env['ir.config_parameter'].set_param('view_background_color', self.view_background_color)
-        self.env['ir.config_parameter'].set_param('main_text_color', self.main_text_color)
-        self.env['ir.config_parameter'].set_param('home_menu_background_from', self.home_menu_background_from)
-        self.env['ir.config_parameter'].set_param('home_menu_background_to', self.home_menu_background_to)
-        params['main_menu_color']        = self.main_menu_color
-        params['premary_btn_color']      = self.premary_btn_color
-        params['list_view_header']       = self.list_view_header
-        params['list_footer_bg_color']   = self.list_footer_bg_color
-        params['webclient_background']   = self.webclient_background
-        params['view_background_color']  = self.view_background_color
-        params['main_text_color']        = self.main_text_color
-        params['home_menu_background_from']      = self.home_menu_background_from
-        params['home_menu_background_to']        = self.home_menu_background_to
+        main_menu_color =''
+        premary_btn_color=''
+        list_view_header =''
+        list_footer_bg_color=''
+        webclient_background=''
+        view_background_color=''
+        main_text_color=''
+        home_menu_background_from=''
+        home_menu_background_to=''
+        if self.main_menu_color:  main_menu_color = self.main_menu_color 
+        else : main_menu_color = default_colors['main_menu_color'] 
+
+        if self.premary_btn_color:  premary_btn_color = self.premary_btn_color 
+        else : premary_btn_color = default_colors['premary_btn_color'] 
+      
+        if self.list_view_header:  list_view_header = self.list_view_header 
+        else : list_view_header = default_colors['list_view_header'] 
+        if self.list_footer_bg_color:  list_footer_bg_color = self.list_footer_bg_color 
+        else : list_footer_bg_color = default_colors['list_footer_bg_color'] 
+        if self.webclient_background:  webclient_background = self.webclient_background 
+        else : webclient_background = default_colors['webclient_background'] 
+        
+        if self.premary_btn_color:  premary_btn_color = self.premary_btn_color 
+        else : premary_btn_color = default_colors['premary_btn_color'] 
+        if self.view_background_color:  view_background_color = self.view_background_color 
+        else : view_background_color = default_colors['view_background_color'] 
+        if self.main_text_color:  main_text_color = self.main_text_color 
+        else : main_text_color = default_colors['main_text_color'] 
+        if self.home_menu_background_from:  home_menu_background_from = self.home_menu_background_from 
+        else : home_menu_background_from = default_colors['home_menu_background_from'] 
+        if self.home_menu_background_to:  home_menu_background_to = self.home_menu_background_to 
+        else : home_menu_background_to = default_colors['home_menu_background_to'] 
+
+        self.env['ir.config_parameter'].set_param('main_menu_color', main_menu_color)
+        self.env['ir.config_parameter'].set_param('premary_btn_color', premary_btn_color)
+        self.env['ir.config_parameter'].set_param('list_view_header', list_view_header)
+        self.env['ir.config_parameter'].set_param('list_footer_bg_color', list_view_header)
+        self.env['ir.config_parameter'].set_param('webclient_background', webclient_background)
+        self.env['ir.config_parameter'].set_param('view_background_color', view_background_color)
+        self.env['ir.config_parameter'].set_param('main_text_color', main_text_color)
+        self.env['ir.config_parameter'].set_param('home_menu_background_from', home_menu_background_from)
+        self.env['ir.config_parameter'].set_param('home_menu_background_to', home_menu_background_to)
+        params['main_menu_color']        = main_menu_color
+        params['premary_btn_color']      = premary_btn_color
+        params['list_view_header']       = list_view_header
+        params['list_footer_bg_color']   = list_footer_bg_color
+        params['webclient_background']   = webclient_background
+        params['view_background_color']  = view_background_color
+        params['main_text_color']        = main_text_color
+        params['home_menu_background_from']      = home_menu_background_from
+        params['home_menu_background_to']        = home_menu_background_to
 
         self.change_sccs_file_primary_variables(params)
        
